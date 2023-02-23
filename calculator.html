@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href="layout.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container" align="center">
+            <form >
+                <div id="screen"><input id="txt" type="text" maxlength="5"></div>
+                <div id="r1">
+                    <input type="button" id="bt" value="AC" onclick="operators(event)" >
+                    <input type="button" id="bt" value="⌫" onclick="operators(event)">
+                    <input type="button" id="bt" value="/" onclick="display(event) ">
+                    <input type="button" id="bt" value="*" onclick="display(event)  ">
+                </div>
+            
+                <div id="r2">
+                    <input type="button" id="bt" value="7" onclick="display(event) ">
+                    <input type="button" id="bt" value="8" onclick="display(event) " >
+                    <input type="button" id="bt" value="9" onclick="display(event) ">
+                    <input type="button" id="bt" value="-" onclick="display(event) ">
+                </div>
+                    
+                
+                <div id="r3">
+                    <input type="button" id="bt" value="4" onclick="display(event)">
+                    <input type="button" id="bt" value="5" onclick="display(event)">
+                    <input type="button" id="bt" value="6" onclick="display(event)">
+                    <td><input type="button" id="bt" value="+" onclick="display(event)">
+                </div>
+
+                <div id="r4r5">
+                    
+                    <div id="r4">
+                                
+                        <input type="button" id="bt" value="1" onclick="display(event)">
+                        <input type="button" id="bt" value="2" onclick="display(event)">
+                        <input type="button" id="bt" value="3" onclick="display(event)">
+                        <input type="button" id="eql" value="=" onclick="operators(event)">           
+                    
+                    </div>
+                    
+                    <div id="r5">
+                        <input type="button" id="btn_zero" value="0" onclick="display(event)">
+                        <input type="button" id="point" value="." onclick="display(event)">
+        
+                    </div>                                          
+                </div>
+                        
+            </form>
+        </div>
+
+    <script>
+        function display(event){
+            let text =  event.target;
+            let val = text.value;
+            document.getElementById("txt").value += val ;
+        }
+        function operators(event){
+            let opr = event.target;
+            let op_val = opr.value;
+            let screen = document.getElementById("txt");
+
+            if(op_val == '='){
+                screen.value = eval(screen.value);
+            }
+            else if(op_val == "⌫"){
+                screen.value = screen.value.slice(0,-1);
+            }
+            else if(op_val == "AC"){
+                screen.value = "";
+            }
+        }
+    </script>
+    </body>
+</html>

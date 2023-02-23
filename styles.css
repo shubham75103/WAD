@@ -1,0 +1,38 @@
+*{color: white;}
+body{
+    background:linear-gradient(to bottom right,#2549b8 5%,rgb(109, 191, 254) 50% ,cyan 100%);}
+.container{
+    
+    border: none;
+    color: white;
+    border-radius:35px;
+    box-shadow: 1px 1px 15px 2px black ,2px 2px 5px 2px white inset ;
+
+}
+
+input[type=button]{
+    box-shadow: 2px 2px white inset,2px 2px black;
+    border:none;
+    border-radius: 15px;
+    background:transparent;
+    border:1px solid #996ddb;
+    font-size: 22px;
+}
+
+input[type=text]{
+    
+    background: transparent;
+    color: white;
+    font-size:40px;
+    
+}
+form{
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px 2px  black ,2px 2px 5px 2px white inset ;
+
+}
+
+input[type=button]:hover{
+    background-color:white;
+    color:#060ef1;
+}
